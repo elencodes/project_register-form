@@ -13,19 +13,31 @@
 		<form action="#">
 			<h1>Регистрация</h1>
 			<div class="input__box">
-				<input type="text" placeholder="Имя пользователя">
+				<input type="text" placeholder="Имя пользователя" required>
 			</div>
 			<div class="input__box">
-				<input type="email" placeholder="Электронная почта">
+				<input type="email" placeholder="Электронная почта" required>
 			</div>
 			<div class="input__box">
-				<input type="text" placeholder="Дата рождения">
+				<input type="text" placeholder="Дата рождения" required>
 			</div>
 			<div class="input__box">
-				<input type="radio">
+				<input type="radio">Мужской
+				<input type="radio">Женский
 			</div>
 			<div class="input__box">
-
+				<select name="" id="" placeholder="Выберите" required>
+					<option value="doctor">Врач</option>
+					<option value="programmist">Программист</option>
+					<option value="teacher">Учитель</option>
+					<option value="designer">Дизайнер</option>
+					<option value="ingeener">Инженер</option>
+					<option value="saler">Продавец</option>
+					<option value="other">Другое</option>
+				</select>
+				<div class="input__box">
+					<input type="password" placeholder="Пароль" required minlength="8" pattern="">
+				</div>
 			</div>
 		</form>
 	</div>
