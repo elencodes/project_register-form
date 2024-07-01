@@ -6,14 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Форма регистрации</title>
 	<link rel="stylesheet" href="assets/scss/style.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 	<div class="wrapper">
 		<form action="#">
-			<h1>Регистрация</h1>
+			<h1 class="title">Регистрация</h1>
 			<div class="input__box">
 				<input type="text" placeholder="Имя пользователя" required>
+				<!-- <i class='bx bxs-user'></i> -->
 			</div>
 			<div class="input__box">
 				<input type="email" placeholder="Электронная почта" required>
@@ -21,13 +23,15 @@
 			<div class="input__box">
 				<input type="text" placeholder="Дата рождения" required>
 			</div>
-			<div class="input__box">
-				<input type="radio">Мужской
-				<input type="radio">Женский
+			<div class="input__box-radio">
+				<label for="radio" class="label">Выберите пол
+					<input type="radio" class="input__box-male">Мужской
+					<input type="radio">Женский
+				</label>
 			</div>
 			<div class="input__box">
-				<select name="" id="" placeholder="Выберите" required>
-					<option value="">Выберите</option>
+				<select name="" id="" placeholder="Выберите профессию" required>
+					<option value="">Выберите профессию</option>
 					<option value="doctor">Врач</option>
 					<option value="programmist">Программист</option>
 					<option value="teacher">Учитель</option>
@@ -36,15 +40,17 @@
 					<option value="saler">Продавец</option>
 					<option value="other">Другое</option>
 				</select>
-				<div class="input__box">
-					<input type="password" placeholder="Пароль" required minlength="8" pattern="">
-				</div>
-				<div class="input__box">
-					<input type="checkbox" required>
-					<label for="">Согласие с обработкой персональных данных</label>
-				</div>
 			</div>
-		</form>
+			<div class="input__box">
+				<input type="password" placeholder="Пароль" required minlength="8" pattern="">
+				<!-- <i class='bx bxs-lock-alt'></i> -->
+			</div>
+			<div class="checkbox__box">
+				<label for=""> <input type="checkbox" required>Согласие с обработкой персональных данных</label>
+			</div>
+			<button type="submit" class="btn">Зарегистрироваться</button>
+	</div>
+	</form>
 	</div>
 	<script src="js/script.js"></script>
 </body>
