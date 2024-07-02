@@ -90,7 +90,7 @@ body {
 	background-color: #A271E5;
 }
 
-.label {
+.label__gender {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
 }
@@ -124,7 +124,8 @@ body {
 
 .wrapper .checkbox__box label input {
 	accent-color: #FFFFFF;
-	margin-right: .3125rem;
+	margin-right: .5rem;
+	margin-left: .625rem;
 }
 
 .wrapper .btn {
