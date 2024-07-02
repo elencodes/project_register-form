@@ -24,10 +24,11 @@
 				<input type="date" placeholder="Дата рождения" required>
 			</div>
 			<div class="input__box-radio">
-				<label for="radio" class="label">Выберите пол
-					<input type="radio" class="input__box-male">Мужской
-					<input type="radio">Женский
-				</label>
+				<label class="label">Выберите пол</label>
+				<input type="radio" class="input__box-male" id="radio-male" value="male" name="gender">
+				<label for="radio-male" class="label__male">Мужской</label>
+				<input type="radio" class="input__box-female" id="radio-female" value="female" name="gender">
+				<label for="radio-female" class="label__female">Женский</label>
 			</div>
 			<div class="input__box">
 				<select name="" id="" placeholder="Выберите профессию" required>
@@ -46,7 +47,8 @@
 				<!-- <i class='bx bxs-lock-alt'></i> -->
 			</div>
 			<div class="checkbox__box">
-				<label for=""> <input type="checkbox" required>Согласие с обработкой персональных данных</label>
+				<label for="agree"><input type="checkbox" id="agree" required>Согласие с обработкой персональных
+					данных</label>
 			</div>
 			<button type="submit" class="btn">Зарегистрироваться</button>
 	</div>

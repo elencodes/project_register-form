@@ -86,11 +86,22 @@ body {
 	color: #FFFFFF;
 }
 
-.label {
-	padding-left: 20px;
+.input__box option {
+	background-color: #A271E5;
 }
 
-.input__box-male {
+.label {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.label__male,
+.label__female {
+	padding-left: .3125rem;
+}
+
+.input__box-male,
+.input__box-female {
 	display: inline-block;
 	margin-left: .625rem;
 }
