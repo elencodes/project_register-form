@@ -11,28 +11,32 @@
 
 <body>
 	<div class="wrapper">
-		<form action="#" name="main">
+		<form id="mainForm" action="#" name="mainForm" novalidate>
 			<h1 class="title">Регистрация</h1>
-			<div class="input__box">
-				<input type="text" placeholder="Имя пользователя" name="userName" required>
+			<div class="input__box input__box--name">
+				<input type="text" placeholder="Имя пользователя" name="userName" minlength="2" maxlength="20" required>
 				<i class='bx bxs-user'></i>
 			</div>
-			<div class="input__box">
+			<div class="error__userName"></div>
+			<div class="input__box input__box--email">
 				<input type="email" placeholder="Электронная почта" name="userEmail" required>
 				<i class='bx bx-envelope'></i>
 			</div>
-			<div class="input__box input__box-date">
-				<input type="date" placeholder="Дата рождения" name="userAge" required>
+			<div class="error__userEmail"></div>
+			<div class="input__box input__box-date input__box--age">
+				<input type="number" placeholder="Возраст" name="userAge" required>
 			</div>
+			<div class="error__userAge"></div>
 			<div class="input__box-radio">
-				<label class="label__gender">Выберите пол</label>
+				<label class="label__gender">Пол:</label>
 				<input type="radio" class="input__box-male" id="radio-male" value="male" name="userGender">
 				<label for="radio-male" class="label__male">Мужской</label>
 				<input type="radio" class="input__box-female" id="radio-female" value="female" name="userGender">
 				<label for="radio-female" class="label__female">Женский</label>
 			</div>
-			<div class="input__box">
-				<select id="select" placeholder="Выберите профессию" name="userProfession" required>
+			<div class="error__userGender"></div>
+			<div class="input__box input__box-profession">
+				<select placeholder="Выберите профессию" name="userProfession" required>
 					<option value="" selected>Выберите профессию</option>
 					<option value="doctor">Врач</option>
 					<option value="programmist">Программист</option>
@@ -43,18 +47,21 @@
 					<option value="other">Другое</option>
 				</select>
 			</div>
-			<div class="input__box">
+			<div class="error__userProfession"></div>
+			<div class="input__box input__box--password">
 				<input type="password" placeholder="Пароль" required minlength="8" pattern="" name="userPassword">
 				<i class='bx bxs-lock-alt'></i>
 			</div>
-			<div class="checkbox__box">
-				<label for="agree"><input type="checkbox" id="agree" required name="userAgree">Согласие с обработкой
-					персональных
-					данных</label>
+			<div class="error__userPassword"></div>
+			<div class="checkbox__box ">
+				<label for="userAgree">
+					<input type="checkbox" id="userAgree" required name="userAgree">Согласие с обработкой персональных
+					данных
+				</label>
 			</div>
-			<button type="submit" class="btn">Зарегистрироваться</button>
-	</div>
-	</form>
+			<div class="error__checkboxAgree"></div>
+			<button type="submit" class="button">Зарегистрироваться</button>
+		</form>
 	</div>
 	<script src="js/script.js"></script>
 </body>
