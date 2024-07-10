@@ -114,13 +114,13 @@ function checkFormValidityAge() {
 		inputAgeClass.classList.add('error');
 		inputAgeClass.style.margin = "1.875rem 0 1rem 0";
 	} else if (Number(inputAge.value) >= 1 && Number(inputAge.value) <= 120) {
-		//(если возраст введен некорректно - появляются сообщения об ошибке)
+		//(если возраст введен корректно - сообщения об ошибке исчезают)
 		errorUserAge.textContent = ``;
 		errorUserAge.classList.remove('error__message');
 		inputAgeClass.classList.remove('error');
 		inputAgeClass.style.margin = "1.875rem 0 1rem 0";
 	} else {
-		//(если возраст введен корректно - сообщения об ошибке исчезают)
+		//(если возраст введен некорректно - появляются сообщения об ошибке)
 		errorUserAge.textContent = `Введите корректный возраст`;
 		errorUserAge.classList.add('error__message');
 		inputAgeClass.classList.add('error');
