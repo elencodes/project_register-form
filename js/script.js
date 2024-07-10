@@ -51,6 +51,7 @@ function validatePassword(password) {
 	return regex.test(password);
 }
 
+console.log(inputName.value.length);
 
 //7 Расширенная валидация имени пользователя (функция еще не вызывается)
 function checkFormValidityName() {
@@ -60,9 +61,15 @@ function checkFormValidityName() {
 		errorUserName.classList.add('error__message');
 		inputNameClass.classList.add('error');
 		inputNameClass.style.margin = "1.875rem 0 1rem 0";
+	} else if (inputName.value.length < 2 || inputName.value.length > 20) {
+		//(если имя введено некорректно - появляются сообщения об ошибке)
+		errorUserName.textContent = `Имя должно содержать от 2 до 20 символов`;
+		errorUserName.classList.add('error__message');
+		inputNameClass.classList.add('error');
+		inputNameClass.style.margin = "1.875rem 0 1rem 0";
 	} else if (validateName(inputName.value) === false) {
 		//(если имя введено некорректно - появляются сообщения об ошибке)
-		errorUserName.textContent = `Имя должно содержать только буквы и пробелы`;
+		errorUserName.textContent = `Имя должно содержать латинские буквы и пробелы`;
 		errorUserName.classList.add('error__message');
 		inputNameClass.classList.add('error');
 		inputNameClass.style.margin = "1.875rem 0 1rem 0";
@@ -294,13 +301,6 @@ checkboxAgree.addEventListener(`change`, checkFormValidityAgree);
 //31 Проверка на валидность всех введенных данных пользователем
 //(событие change срабатывает при изменении значения элемента формы)
 mainForm.addEventListener(`change`, function (event) {
-	checkFormValidityName();
-	checkFormValidityEmail();
-	checkFormValidityAge();
-	checkFormValidityGender();
-	checkFormValidityProfession();
-	checkFormValidityPassword();
-	checkFormValidityAgree();
 
 	//добавление стилей для кнопки (кнопка станет активной, если нет сообщений об ошибках и галочка стоит на согласии)
 	if (document.querySelectorAll('.error__message').length === 0 && checkboxAgree.checked) {
